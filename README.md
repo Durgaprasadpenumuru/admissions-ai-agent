@@ -1,4 +1,4 @@
-# 🎓 Nova Admissions AI
+# 🎓 Admissions AI
 
 A smart, context-aware AI agent designed to streamline university admissions inquiries. Built with **Llama 3**, **Groq**, and **Streamlit**.
 
@@ -21,7 +21,7 @@ A smart, context-aware AI agent designed to streamline university admissions inq
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Durgaprasadpenumuru/admissions-ai-agent.git](https://github.com/Durgaprasadpenumuru/admissions-ai-agent.git)
+    git clone https://github.com/Durgaprasadpenumuru/admissions-ai-agent.git
     cd admissions-ai-agent
     ```
 
