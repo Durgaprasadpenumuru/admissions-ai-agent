@@ -1,0 +1,31 @@
+# --- Security (CRITICAL) ---
+.env
+secrets.toml
+*.pem
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+.env_folder/
+
+# --- Database ---
+# We ignore this because your code auto-generates it.
+# You don't want binary files cluttering your repo history.
+*.db
+university.db
+agents.db
+
+# --- IDE Settings (Optional) ---
+.vscode/
+.idea/
+
+# --- OS Junk Files ---
+.DS_Store
+Thumbs.db
