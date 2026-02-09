@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>University Admissions Portal</title>
+    <style>
+        /* 1. The Fake Website Background */
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 { color: #2c3e50; font-size: 3em; }
+        p { color: #34495e; font-size: 1.2em; }
+
+        /* 2. The Chat Bubble Button */
+        .chat-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* 3. The Chat Window (Hidden by default) */
+        .chat-window {
+            display: none; /* Hidden initially */
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 400px;
+            height: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        /* 4. The Iframe (Your Streamlit App) */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Future University</h1>
+    <p>Empowering the next generation of innovators.</p>
+
+    <button class="chat-btn" onclick="toggleChat()">💬</button>
+
+    <div class="chat-window" id="chatWindow">
+        <iframe src="http://localhost:8501/?embed=true"></iframe>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var x = document.getElementById("chatWindow");
+            if (x.style.display === "none" || x.style.display === "") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
